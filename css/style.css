@@ -1,0 +1,1054 @@
+:root {
+ --bg-color: #060d23;
+ --second-bg-color: #030614;
+ --text-color: white;
+ --main-color: #0f1cab;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 50%;
+  overflow-x: hidden;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+.header{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 4rem 14%;
+  background: rgba(1, 1, 3, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+#menu-icon{
+  font-size: 3.5rem;
+  color: var(--main-color);
+  display: none;
+}
+.logo{
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.logo:hover{
+  transform: scale(1.1);
+}
+span{
+  background: linear-gradient(
+    270deg,
+    #041093 10%,
+    #15bdff 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+.navbar a{
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-left: 5rem;
+  font-weight: 650;
+  transition: 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+.navbar a:hover{
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+.gradient-btn{
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  background: linear-gradient(
+    270deg,
+    #041093 10%,
+    #15bdff 100%);
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  color: white;
+  border: none;
+  text-wrap: nowrap;
+}
+.gradient-btn:hover{
+  transform: scale(1.05);
+}
+section{
+  min-height: 100vh;
+  padding: 10rem 12% 10rem;
+}
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+}
+.home-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  justify-content: center;
+
+}
+.home-content h1{
+  font-size: 6rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 650;
+  margin-top: 1rem;
+  line-height: 1;
+}
+.home-content h3{
+  margin-bottom: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top: 1rem;
+  font-size: 5rem;
+}
+
+.home-content p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.6rem;
+  font-weight: 540;
+  line-height: 1.5;
+}
+.home-img {
+  border-radius: 50%;
+}
+.home-img img{
+  position: relative;
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+.home-img img:hover{
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color),
+              0 0 100px var(--main-color);
+}
+.social-icons a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 1rem;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  color: var(--main-color);
+  margin: 3rem 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+.social-icons a:hover{
+  color: white;
+  background-color: var(--main-color);
+  background-color: var(--main-color);
+  transform: scale(1.2) translateY(-5px);
+  box-shadow: 0 0 25px var(--main-color);
+}
+.btn-group{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.btn{
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background-color: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  color: black;
+  border: 2px solid transparent;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 50px var(--main-color);
+}
+.btn-group a:nth-of-type(2){
+   background-color: black;
+   color: var(--main-color);
+   border: 2px solid var(--main-color);
+   box-shadow: 0 0 25px transparent;
+}
+.btn-group a:nth-of-type(2):hover{
+  box-shadow: 0 0 25px var(--main-color);
+  background-color: var(--main-color);
+  color: black;
+}
+.text-animation {
+  font-size: 34px;
+  font-weight: 500;
+  min-width: 280px;
+}
+.text-animation span {
+  position: relative;
+}
+.text-animation span::before {
+  content: "IT Manager";
+  color: var(--main-color);
+  animation: words 20s infinite;
+}
+.text-animation span::after {
+  content: "";
+  background-color: var(--bg-color);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid var(--bg-color);
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+  to{
+    border-left: 2px solid var(--main-color);
+  }
+}
+@keyframes words {
+  0%,
+  20% {
+    content: "IT Manager";
+  }
+  21%,
+  40% {
+    content: "IT Manager"
+  }
+  41%,
+  60% {
+    content: "IT Manager";
+  }
+  61%,
+  80% {
+    content: "IT Manager";
+  }
+  81%,
+  100% {
+    content: "IT Manager";
+  }
+}
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background: url(bg2.jpg)center no-repeat;
+  background-size: cover;
+}
+.about-content h2{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 8rem;
+  text-align: center;
+  color: white;
+}
+.about-content h2 span {
+  background: linear-gradient(
+    270deg,
+    #041093 10%,
+    #15bdff 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.about-content p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.about-content p .name-highlight {
+  background: linear-gradient(
+    270deg,
+    #15bdff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+.about-subheading {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3.2rem;
+  color: #15bdff;
+  text-align: left;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.technology-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 3rem;
+  text-align: left;
+}
+
+.technology-list li {
+  font-family: Cambria, Cochin, Georgia, Times,
+               'Times New Roman', serif;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  padding: 1rem 1.5rem;
+  background-color: rgba(15, 28, 171, 0.15);
+  border-left: 3px solid #15bdff;
+  border-radius: 0.8rem;
+  transition: 0.3s ease-in-out;
+}
+
+.technology-list li:hover {
+  background-color: rgba(15, 28, 171, 0.35);
+  transform: translateX(5px);
+  border-left-color: white;
+}
+::-webkit-scrollbar{
+  width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+.heading{
+  text-align: center;
+  font-size: 7rem;
+  margin: 3.5rem 0;
+}
+.skills{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: black;
+}
+.skills h2{
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+  width: fit-content;
+  position: relative;
+  background: linear-gradient(270deg, #041093 40%, #15bdff 55%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 5rem;
+}
+.skills h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(270deg, #041093, #15bdff);
+  border-radius: 2px;
+}
+.skills-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  gap: 3rem;
+}
+.skill-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  height: 450px;
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 5px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+.skill-box:hover{
+  background: var(--second-bg-color);
+  color: var(--main-color);
+  border: 5px solid var(--main-color);
+  transform: scale(1.03);
+}
+.skill-info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+.skill-info h4{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
+  margin: 2rem 0;
+  font-weight: 550;
+}
+.skill-info p{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.4em;
+  font-weight: 550;
+  line-height: 2;
+}
+.skill-info i{
+  font-size: 8rem;
+}
+.projects{
+  background: url(bg.jpg) center no-repeat;
+  background-size: cover;
+}
+.projects{
+  background-color: var(--second-bg-color);
+}
+.projects-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  place-items: center;
+  gap: 3rem;
+  row-gap: 3rem;
+}
+.projects-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 5rem;
+  gap: 2rem;
+  padding: 5rem 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--main-color);
+  transition: 0.3s ease;
+}
+.projects-card:hover {
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color);
+  transform: scale(1.02);
+}
+.projects-card img {
+  max-width: 300px;
+  border-radius: 2em;
+  object-fit: cover;
+}
+.projects h2 {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+  width: fit-content;
+  position: relative;
+  background: linear-gradient(270deg, #041093 40%, #15bdff 55%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 5rem;
+}
+.projects h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(270deg, #041093, #15bdff);
+  border-radius: 2px;
+}
+.projects-card h3 {
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(15, 8, 150);
+  font-size: 3rem;
+}
+.projects-card p {
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+.contact{
+  background-color: var(--bg-color);
+}
+.contact h2{
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+.contact-intro {
+  max-width: 850px;
+  margin: 0 auto 4rem;
+  padding: 2rem;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, serif;
+}
+
+.contact-intro h3 {
+  font-size: 4rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.3;
+  background: linear-gradient(270deg, #041093 10%, #15bdff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact-intro p {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.contact-intro .contact-message {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #15bdff;
+  margin-top: 2.5rem;
+}
+.contact form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0;
+  text-align: center;
+}
+.contact form .input-box input,
+.contact form textarea{
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  border: 2px solid var(--main-color);
+  margin: 1.5rem 0;
+  resize: none;
+}
+.contact-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+.contact-item{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 32rem;
+  padding: 2rem;
+  background-color: var(--second-bg-color);
+  border: 2px solid var(--second-bg-color);
+  border-radius: 1.5rem;
+  transition: 0.3s ease;
+}
+.contact-item:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px var(--main-color);
+}
+.contact-item i{
+  font-size: 4rem;
+  color: var(--main-color);
+}
+.contact-item h3{
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+.contact-item a{
+  font-size: 1.4rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
+.contact-item a:hover{
+  color: var(--main-color)
+}
+.footer{
+  background-color: var(--second-bg-color);
+  padding: 50px 0;
+}
+.footer .social-icons{
+  text-align: center;
+}
+.footer ul{
+  text-align: center;
+  font-size: 1.8rem;
+}
+.footer ul li{
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer ul li a{
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover{
+  border-bottom: 3px solid var(--main-color);
+}
+.footer .copyright{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+}
+@media (max-width: 1200px) {
+  .header {
+    padding: 3rem 6%;
+  }
+  section {
+    padding: 10rem 6% 8rem;
+  }
+  .home {
+    gap: 6rem;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+  }
+  .home-content h3 {
+    font-size: 4rem;
+  }
+  .home-img img {
+    width: 38vw;
+  }
+  .about {
+    gap: 5rem;
+  }
+  .about-content h2 {
+    font-size: 6rem;
+  }
+  .about-content p {
+    font-size: 2rem;
+  }
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 991px) {
+  .header {
+    padding: 2.5rem 5%;
+  }
+  #menu-icon {
+    display: block;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 50%;
+    padding: 2rem 3rem;
+    background: var(--second-bg-color);
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    border-radius: 0 0 0 2rem;
+    transition: 0.4s ease-in-out;
+  }
+  .navbar.active {
+    right: 0;
+  }
+  .navbar a {
+    display: block;
+    font-size: 2.2rem;
+    margin: 2.5rem 0;
+    text-align: center;
+  }
+  .header .gradient-btn {
+    display: none;
+  }
+  section {
+    padding: 10rem 5% 8rem;
+  }
+  .home {
+    flex-direction: column-reverse;
+    gap: 5rem;
+    text-align: center;
+  }
+  .home-content {
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+  }
+  .home-content h1 {
+    font-size: 5.5rem;
+  }
+  .home-content h3 {
+    font-size: 4rem;
+  }
+  .home-content p {
+    font-size: 1.8rem;
+  }
+  .home-img img {
+    width: 45vw;
+    max-width: 400px;
+  }
+  .social-icons {
+    text-align: center;
+  }
+  .btn-group {
+    justify-content: center;
+  }
+  .about {
+    flex-direction: column;
+    text-align: center;
+    gap: 4rem;
+  }
+  .about-content {
+    max-width: 850px;
+  }
+  .about-content h2 {
+    font-size: 6rem;
+  }
+  .about-content p {
+    font-size: 2rem;
+  }
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skill-box {
+    height: 400px;
+  }
+  .projects-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact form {
+    flex-direction: column;
+  }
+  .contact form .input-group,
+  .contact form .input-group-2 {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+  .header {
+    padding: 2rem 5%;
+  }
+  .logo {
+    font-size: 2.5rem;
+  }
+  #menu-icon {
+    font-size: 3.5rem;
+  }
+  .navbar {
+    width: 70%;
+  }
+  section {
+    min-height: auto;
+    padding: 9rem 5% 7rem;
+  }
+  .home {
+    min-height: 100vh;
+    gap: 4rem;
+    padding-top: 12rem;
+  }
+  .home-img img {
+    width: 60vw;
+    max-width: 320px;
+  }
+  .home-content h1 {
+    font-size: 4.5rem;
+  }
+  .home-content h3 {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .home-content p {
+    font-size: 1.7rem;
+    line-height: 1.7;
+  }
+  .text-animation {
+    min-width: 0;
+    font-size: 3.2rem;
+  }
+  .social-icons a {
+    font-size: 2.5rem;
+    padding: 0.8rem;
+    margin: 2rem 0.4rem;
+  }
+  .btn-group {
+    gap: 1rem;
+  }
+  .btn {
+    padding: 1rem 2.2rem;
+    font-size: 1.5rem;
+  }
+  .about {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  .heading {
+    font-size: 5rem;
+    margin: 2.5rem 0;
+  }
+  .about-content h2 {
+    font-size: 5rem;
+  }
+  .about-content p {
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+  .about-subheading {
+  font-size: 2.8rem;
+  text-align: center;
+}
+.technology-list {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.technology-list li {
+  font-size: 1.7rem;
+}
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .skill-box {
+    height: auto;
+    min-height: 350px;
+  }
+  .skill-info {
+    padding: 4rem 3rem;
+  }
+  .skill-info i {
+    font-size: 6rem;
+  }
+  .skill-info h4 {
+    font-size: 2.5rem;
+  }
+  .skill-info p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+  .projects-box {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .projects-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 4rem 2rem;
+  }
+  .projects-card img {
+    width: 100%;
+    max-width: 280px;
+  }
+  .projects-card h3 {
+    font-size: 2.6rem;
+  }
+  .projects-card p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+  .contact form {
+    width: 100%;
+    margin: 3rem 0;
+  }
+  .contact form .input-group,
+  .contact form .input-group-2 {
+    width: 100%;
+  }
+  .contact form .input-box {
+    width: 100%;
+  }
+  .contact form .input-box input,
+  .contact form textarea {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.6rem;
+  }
+  .contact-info {
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact-item {
+    width: 100%;
+    max-width: 450px;
+  }
+  .footer {
+    padding: 4rem 5%;
+  }
+  .footer ul {
+    font-size: 1.6rem;
+    line-height: 2.5;
+  }
+  .footer ul li {
+    margin: 0 1rem;
+  }
+  .footer .copyright {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 480px) {
+
+  html {
+    font-size: 42%;
+  }
+  .header {
+    padding: 1.8rem 5%;
+  }
+  .logo {
+    font-size: 2.2rem;
+  }
+  #menu-icon {
+    font-size: 3.2rem;
+  }
+  .navbar {
+    width: 80%;
+  }
+  .navbar a {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+  section {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .home {
+    gap: 3rem;
+    padding-top: 11rem;
+  }
+  .home-img img {
+    width: 65vw;
+  }
+  .home-content h1 {
+    font-size: 3.8rem;
+  }
+  .home-content h3 {
+    font-size: 2.8rem;
+  }
+  .home-content p {
+    font-size: 1.6rem;
+  }
+  .text-animation {
+    font-size: 2.8rem;
+  }
+  .social-icons a {
+    font-size: 2.3rem;
+    margin: 1.5rem 0.3rem;
+  }
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-group .btn {
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+  }
+  .heading {
+    font-size: 4.2rem;
+  }
+  .about-content h2 {
+    font-size: 4.2rem;
+  }
+  .about-content p {
+    font-size: 1.7rem;
+  }
+  .skill-box {
+    min-height: 330px;
+  }
+  .skill-info {
+    padding: 3rem 2rem;
+  }
+  .skill-info i {
+    font-size: 5.5rem;
+  }
+  .skill-info h4 {
+    font-size: 2.3rem;
+  }
+  .skill-info p {
+    font-size: 1.4rem;
+  }
+  .projects-card {
+    padding: 3rem 1.5rem;
+    border-radius: 3rem;
+  }
+  .projects-card h3 {
+    font-size: 2.3rem;
+  }
+  .contact-item {
+    padding: 1.5rem;
+  }
+  .contact-item i {
+    font-size: 3.2rem;
+  }
+  .contact-item h3 {
+    font-size: 1.6rem;
+  }
+  .contact-item a {
+    font-size: 1.3rem;
+    word-break: break-word;
+  }
+  .footer ul li {
+    display: block;
+    margin: 1rem 0;
+  }
+}
+@media (max-width: 360px) {
+
+  html {
+    font-size: 40%;
+  }
+  .logo {
+    font-size: 2rem;
+  }
+  .home-content h1 {
+    font-size: 3.4rem;
+  }
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+  .home-img img {
+    width: 70vw;
+  }
+  .heading,
+  .about-content h2 {
+    font-size: 3.8rem;
+  }
+  .skill-info h4 {
+    font-size: 2.1rem;
+  }
+}
