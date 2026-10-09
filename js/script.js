@@ -1,7 +1,18 @@
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.querySelector("#menu-icon");
+    const navbar = document.querySelector(".navbar");
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
+    if (menuIcon && navbar) {
+        menuIcon.addEventListener("click", () => {
+            menuIcon.classList.toggle("bx-x");
+            navbar.classList.toggle("active");
+        });
+        
+        navbar.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                menuIcon.classList.remove("bx-x");
+                navbar.classList.remove("active");
+            });
+        });
+    }
+});
